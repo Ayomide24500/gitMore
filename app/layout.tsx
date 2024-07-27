@@ -4,6 +4,7 @@ import "./globals.css";
 import MainLayout from "./MainLayout";
 import { dbConfig } from "@/utils/dbConfig";
 import MainSession from "./components/MainSession";
+import Header from "./static/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,8 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MainSession>
-          <MainLayout children={children} />
-        </MainSession>
+        <Header />
+        {children}
       </body>
     </html>
   );
